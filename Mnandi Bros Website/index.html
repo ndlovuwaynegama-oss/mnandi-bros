@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mnandi Bros Fast Food</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="manifest" href="manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registered!');
+          })
+          .catch(error => {
+            console.log('Service Worker registration failed:', error);
+          });
+      });
+    }
+  </script>
+</head>
+<body> 
+    <nav class="navbar">
+  <div class="container">
+    <div class="logo">Mnandi Bros</div>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#portfolio">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header>
+
+
+  <h1>Mnandi Bros Fast Food</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+
+</header>
+
+
+<section class="hero-slider">
+  <div class="slide fade">
+    <img src="images/slider 1.jpg" alt="Mnandi Full House">
+    <div class="text">🍔🔥 MNANDI BROS PRESENTS 🔥🍔
+</div>
+  </div>
+
+  <div class="slide fade">
+    <img src="images/slider 2.jpg" alt="Saucy Fries">
+    <div class="text">Served Fresh.Served Loaded.Served with Love</div>
+  </div>
+
+  <div class="slide fade">
+    <img src="images/slider 3.jpg" alt="Burger">
+    <div class="text">Serving the Culture</div>
+  </div>
+
+   <div class="slide fade">
+    <img src="images/slider 4.jpg" alt="Burger">
+    <div class="text">🧡 Bold Flavour
+🖤 Big Attitude
+🧡 Only at Mnandi Bros</div>
+  </div>
+
+   <div class="slide fade">
+    <img src="images/slider 5.jpg" alt="Burger">
+    <div class="text">One bite at a time</div>
+  </div>
+
+   <div class="slide fade">
+    <img src="images/slider 6.jpg" alt="Burger">
+    <div class="text">Mnandi Fam</div>
+  </div>
+
+   <div class="slide fade">
+    <img src="images/slider 7.jpg" alt="Burger">
+    <div class="text">The Best in Plettenberg Bay</div>
+  </div>
+
+   <div class="slide fade">
+    <img src="images/slider 8.jpg" alt="Burger">
+    <div class="text">Juicy Russian Sausages and Patty</div>
+  </div>
+
+   <div class="slide fade">
+    <img src="images/slider 9.jpg" alt="Burger">
+    <div class="text">Drizzled With Our Signature Sauces</div>
+  </div>
+
+   <div class="slide fade">
+    <img src="images/slider 10.jpg" alt="Burger">
+    <div class="text">Cripsy Golden Fries</div>
+  </div>
+</section>
+
+
+<section class="intro">
+  <h2> WHY MNANDI? </h2>
+  <p>
+    We are all about the people. What makes us different is that we are about our food and the experience we offer.
+    Come and taste the kasi culture and become part of the movement.
+  </p>
+</section>
+
+<section id="story" class="story">
+  <h2>Our Story</h2>
+  <p>
+    We started serving in 2019 and have never looked back since then. Mnandi Bros is more than a fast food business
+    as we offer an experience of a lifetime. We are currently based in Plettenberg Bay and we are operating in this area.
+    We serve local products such as iKota, burgers, corn dogs, hot chips and beverages.
+  </p>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+  <h2>Our Products</h2>
+  <div class="portfolio-grid">
+
+    <div class="portfolio-item">
+      <img src="images/full-house.jpg" alt="Mnandi Full House" />
+      <h3>Mnandi Full House</h3>
+<button class="fav-btn" onclick="saveFavorite('Mnandi Full House')">❤️ Order</button>
+
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/double-chickflick.jpg" alt="THE DOUBLE CHICK-FLICK BURGER" />
+      <h3>THE DOUBLE CHICK-FLICK BURGER</h3>
+
+      <button class="fav-btn" onclick="saveFavorite('Mnandi Full House')">❤️ Order</button>
+
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/mnandi-fries.jpg" alt="Mnandi Fries" />
+      <h3>Mnandi Fries</h3>
+
+      <button class="fav-btn" onclick="saveFavorite('Mnandi Full House')">❤️ Order</button>
+
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/sunrise-burger.jpg" alt="The Sunrise Burger" />
+      <h3>The Sunrise Burger</h3>
+      <button class="fav-btn" onclick="saveFavorite('Mnandi Full House')">❤️ Order</button>
+
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/ribster.jpg" alt="RIBSTER" />
+      <h3>RIBSTER</h3>
+      <button class="fav-btn" onclick="saveFavorite('Mnandi Full House')">❤️ Order</button>
+
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/kota-loaded.jpg" alt="Watty and English Kotas Loaded to the Max!" />
+      <h3>Watty & English Kotas Loaded to the Max!</h3>
+      <button class="fav-btn" onclick="saveFavorite('Mnandi Full House')">❤️ Order</button>
+
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/double-cheese.jpg" alt="Double Cheese Burger" />
+      <h3>Double Cheese Burger</h3>
+      <button class="fav-btn" onclick="saveFavorite('Mnandi Full House')">❤️ Order</button>
+
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/loaded-kota-russians.jpg" alt="Loaded Kota with Russians & Saucy Chips" />
+      <h3>Loaded Kota w/ Russians & Saucy Chips</h3>
+      <button class="fav-btn" onclick="saveFavorite('Mnandi Full House')">❤️ Order</button>
+
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/beefy-slap.jpg" alt="Beefy Slap Chip Box – Fully Sauced!" />
+      <h3>Beefy Slap Chip Box – Fully Sauced!</h3>
+      <button class="fav-btn" onclick="saveFavorite('Mnandi Full House')">❤️ Order</button>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/baddie-burger.jpg" alt="The Baddie Burger" />
+      <h3>The Baddie Burger</h3>
+      <button class="fav-btn" onclick="saveFavorite('Mnandi Full House')">❤️ Order </button>
+    </div>
+
+  </div>
+</section>
+
+  <section class="hero">
+    <h2>MNANDI MENU!</h2>
+    <p>The tastiest fast food in town — affordable, fresh, and made with love 🍔🍟</p>
+    <a href="#menu" class="btn">See Our Menu</a>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about">
+    <h2>Who We Are</h2>
+    
+    <h3>Purpose</h3>
+    <p>
+      If you are ever around Plettenberg Bay and consider yourself a foodie then you definitely need to pop by us. We pride ourselves on curating meals that are guaranteed to satisfy your tummy.
+    </p>
+
+    <h3>Our Best Seller</h3>
+    <p><strong>Mnandi Kota Full House</strong></p>
+    <p>
+      Created to fill your tummy up, this meal is certified to fill you up on the go or at home. Served in so many ways this meal is loved by the locals and makes up for a nice lunch or dinner.
+    </p>
+
+    <h3>About Us</h3>
+    <p>
+      Mnandi Bros has been nestled in the Plettenberg Bay area ever since 2019. This cozy establishment highlights our passion for market-fresh ingredients, honest cooking, and an enjoyable atmosphere. Our menu features a selection of dishes, all made in-house by our team of talented chefs.
+    </p>
+    <p>
+      With some of the most delicious combinations of ingredients, there is something for everyone to enjoy. Loved by locals and traveling foodies alike, now is the perfect time for you to join us today at Mnandi Bros.
+    </p>
+  </section>
+
+  <section class="menu-filter">
+  <input type="text" id="menuSearch" placeholder="Search menu items..." />
+
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="kota">Kotas</button>
+    <button class="filter-btn" data-filter="burger">Burgers</button>
+    <button class="filter-btn" data-filter="chips">Loaded Chips</button>
+  </div>
+</section>
+
+<section id="menu" class="menu">
+ 
+</section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+
+    <!-- Mnandi Kota Catalogue with image placeholder -->
+    <div class="mnandi-kota-catalogue">
+      <div class="mnandi-kota-image">
+        <!-- Placeholder image - replace 'kota-placeholder.jpg' with your actual image file -->
+        <img src="mnandi-kota.jpg.png" alt="Mnandi Kota Full House" />
+      </div>
+      <div class="mnandi-kota-text">
+        <h3>🥙 Mnandi Kota</h3>
+        <p>Many restaurants have their own take on this recipe, but we’re confident that ours is the best, always prepared to perfection. Share it with friends or have it all to yourself—you’ll enjoy it till the very last bite.</p>
+      </div>
+    </div>
+
+    <table>
+      <tr><th>Item</th><th>Price</th><th>Qty</th><th>Buy</th></tr>
+      <tr><td>Fullhouse Kota</td><td>R45</td><td><input type="number" value="1" min="1"></td><td><button class="buy-btn">Buy Now</button></td></tr>
+
+
+
+      <tr><td>Russian Kota</td><td>R37</td><td><input type="number" value="1" min="1"></td><td><button class="buy-btn">Buy Now</button></td></tr>
+
+
+      <tr><td>Rib Kota</td><td>R40</td><td><input type="number" value="1" min="1"></td><td><button class="buy-btn">Buy Now</button></td></tr>
+
+
+
+      <tr><td>Bacon Kota</td><td>R40</td><td><input type="number" value="1" min="1"></td><td><button class="buy-btn">Buy Now</button></td></tr>
+
+
+
+      <tr><td>Watty Patty Kota</td><td>R40</td><td><input type="number" value="1" min="1"></td><td><button class="buy-btn">Buy Now</button></td></tr>
+
+
+      <tr><td>Boerewors Patty Kota</td><td>R45</td><td><input type="number" value="1" min="1"></td><td><button class="buy-btn">Buy Now</button></td></tr>
+
+
+      <tr><td>English Kota</td><td>R45</td><td><input type="number" value="1" min="1"></td><td><button class="buy-btn">Buy Now</button></td></tr>
+
+
+      <tr><td>R&B Kota</td><td>R46</td><td><input type="number" value="1" min="1"></td><td><button class="buy-btn">Buy Now</button></td></tr>
+
+
+      <tr><td>All-in-one Kota</td><td>R65</td><td><input type="number" value="1" min="1"></td><td><button class="buy-btn">Buy Now</button></td></tr>
+
+
+    </table>
+
+<table data-category="kota">
+  <!-- kota menu rows -->
+</table>
+
+<table data-category="burger">
+  <!-- burger menu rows -->
+</table>
+
+<table data-category="chips">
+  <!-- chips menu rows -->
+</table>
+
+<section class="ingredients">
+  <h2>Build Your Own Meal</h2>
+  <p>Drag ingredients onto your plate to create your perfect meal!</p>
+
+  <div class="ingredients-list">
+    <div class="ingredient" draggable="true" data-name="Chips (Fries)">
+      <img src="images/chips.png" alt="Chips" />
+      <p>Chips (Fries)</p>
+    </div>
+    <div class="ingredient" draggable="true" data-name="Russian Sausage">
+      <img src="images/russian.png" alt="Russian Sausage" />
+      <p>Russian Sausage</p>
+    </div>
+    <div class="ingredient" draggable="true" data-name="Cheese">
+      <img src="images/cheese.png" alt="Cheese" />
+      <p>Cheese</p>
+    </div>
+    <div class="ingredient" draggable="true" data-name="Polony">
+      <img src="images/polony.png" alt="Polony" />
+      <p>Polony</p>
+    </div>
+    <div class="ingredient" draggable="true" data-name="Tomato Sauce">
+      <img src="images/tomato-sauce.png" alt="Tomato Sauce" />
+      <p>Tomato Sauce</p>
+    </div>
+    <div class="ingredient" draggable="true" data-name="Barbeque Sauce">
+      <img src="images/barbeque-sauce.png" alt="Barbeque Sauce" />
+      <p>Barbeque Sauce</p>
+    </div>
+    <div class="ingredient" draggable="true" data-name="Lettuce">
+      <img src="images/lettuce.png" alt="Lettuce" />
+      <p>Lettuce</p>
+    </div>
+    <div class="ingredient" draggable="true" data-name="Beef Patty">
+      <img src="images/beef-patty.png" alt="Beef Patty" />
+      <p>Beef Patty</p>
+    </div>
+    <div class="ingredient" draggable="true" data-name="Chicken Patty">
+      <img src="images/chicken-patty.png" alt="Chicken Patty" />
+      <p>Chicken Patty</p>
+    </div>
+    <div class="ingredient" draggable="true" data-name="Bacon">
+      <img src="images/bacon.png" alt="Bacon" />
+      <p>Bacon</p>
+    </div>
+
+<div class="ingredient" draggable="true" data-name="Roll">
+      <img src="images/roll.png" alt="Roll" />
+      <p>Roll</p>
+    </div>
+
+<div class="ingredient" draggable="true" data-name="kota-bread">
+      <img src="images/kota-bread.png" alt="Kota-bread" />
+      <p>Kota-brea</p>
+    </div>
+
+<div class="order-area">
+  <button id="orderBtn">Order Now</button>
+  <div id="orderConfirmation" class="order-confirmation"></div>
+</div>
+
+
+  </div>
+</section>
+
+<section class="plate">
+  <h3>Your Plate</h3>
+  <div id="plate-dropzone" class="plate-dropzone">
+    <p>Drop ingredients here</p>
+  </div>
+  <button id="clearPlateBtn">Clear Plate</button>
+  <div id="selectedIngredients">
+    <h4>Selected Ingredients:</h4>
+    <ul id="ingredientsList"></ul>
+
+<button id="orderBtn" style="display: none;">Order Now</button>
+<div id="orderConfirmation" class="order-confirmation" style="display: none;"></div>
+
+
+  </div>
+</section>
+
+
+    <!-- Continue with other menu items as you already have -->
+
+    <!-- Mnandi Burgers & Loaded Chips (existing code) -->
+
+<section id="testimonials" class="testimonials">
+  <h2>What Our Customers Say</h2>
+  <div class="testimonial-container">
+    <div class="testimonial">
+      <p>🔥 “Best kota in town — the Full House is unmatched!”</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <h4>— Sipho M., Plett Local</h4>
+    </div>
+    <div class="testimonial">
+      <p>💯 “I come back every week. The Baddie Burger is my favorite!”</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <h4>— Lerato T., Foodie</h4>
+    </div>
+    <div class="testimonial">
+      <p>👌 “Great service, great food, and proper kasi vibes. Highly recommend!”</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <h4>— Brian Z., Tourist</h4>
+    </div>
+  </div>
+</section>
+
+<section class="delivery-section" id="delivery">
+  <h2>🚚 Delivery Areas</h2>
+  <p class="section-subtitle">We bring the flavour straight to your doorstep.</p>
+
+  <div class="delivery-content">
+    <!-- Delivery Info Panel -->
+    <div class="delivery-info">
+      <h3>Delivery Pricing</h3>
+      <ul>
+        <li><strong>Kwanokuthula</strong> – R10</li>
+        <li><strong>New Horizon / Pine Trees</strong> – R15</li>
+        <li><strong>Qolweni / Town</strong> – R20</li>
+      </ul>
+    </div>
+
+    <!-- Embedded Google Map -->
+    <div class="delivery-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.265470089258!2d23.364602914870436!3d-34.051119380610245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dd35bbfc62d6b03%3A0x1f8496f228d7c1e7!2sPlettenberg%20Bay%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1691342342234!5m2!1sen!2sza" 
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<section class="delivery-tracker">
+  <h2>Track Your Order</h2>
+  <div class="tracker-steps">
+    <div class="step active">Order Received</div>
+    <div class="step">Preparing</div>
+    <div class="step">On The Way</div>
+    <div class="step">Delivered</div>
+  </div>
+  <button onclick="advanceStep()">Next Stage</button>
+</section>
+
+
+  </section>
+
+<section id="location" class="location-section">
+  <h2>Find Us in Plettenberg Bay</h2>
+  <p class="location-text">
+    We are based in the heart of <strong>Plettenberg Bay</strong>. Come enjoy our tasty meals, or order for delivery!
+    <br><br>
+    🚚 <strong>Delivery Available:</strong> Monday – Saturday, 10am – 8pm<br>
+    📞 Call/WhatsApp: <strong>+27 74 123 4567</strong><br>
+  </p>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.496955705616!2d23.362024074857015!3d-34.052661518075946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e6a3f2c8007c315%3A0x29afbe1c285bdf1c!2sPlettenberg%20Bay!5e0!3m2!1sen!2sza!4v1721654704885!5m2!1sen!2sza"
+      width="100%"
+      height="300"
+      style="border:0; border-radius: 12px;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<section class="order-form-section">
+  <h2>Place Your Order</h2>
+  <form class="order-form">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone">Contact Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+<label for="payment">Choose Payment Method:</label>
+<select id="payment" name="payment" required>
+  <option value="">-- Select Payment Method --</option>
+  <option value="cash">Cash (Pay on Delivery)</option>
+  <option value="card">Card (Swipe on Delivery)</option>
+</select>
+
+
+    <label for="item">Select Item:</label>
+    <select id="item" name="item" required>
+      <option value="">-- Choose Your Item --</option>
+      <option>Mnandi Full House</option>
+      <option>The Double Chick-Flick Burger</option>
+      <option>Mnandi Fries</option>
+      <option>The Sunrise Burger</option>
+      <option>Ribster</option>
+      <option>Watty & English Kotas</option>
+      <option>Double Cheese Burger</option>
+      <option>Loaded Kota with Russians</option>
+      <option>Beefy Slap Chip Box</option>
+      <option>The Baddie Burger</option>
+      <option>Mnandi Russian</option>
+      <option>The Chic-Flick Kota</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="1" required>
+
+    <label for="message">Message (Optional):</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit">Send Order</button>
+  </form>
+</section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Reach out with questions, orders, or feedback.</p>
+
+    <form action="#" method="post" class="contact-form">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br />
+
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="5" required></textarea><br />
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <p><strong>Phone:</strong> 081 772 3319</p>
+    <p><strong>Email:</strong> contact@mnandibros.co.za</p>
+    <p><strong>Location:</strong> 123 Fast Food Street, Plettenberg Bay, South Africa</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mnandi Bros Fast Food. All rights reserved. Delivery: 081 772 3319</p>
+  </footer>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Mnandi Bros Fast Food</h3>
+      <p>Serving the best kasi fast food in Plettenberg Bay since 2019. Affordable, fresh, and made with love.</p>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Info</h3>
+      <p><strong>Phone:</strong> 081 772 3319</p>
+      <p><strong>Email:</strong> contact@mnandibros.co.za</p>
+      <p><strong>Location:</strong> 123 Fast Food Street, Plettenberg Bay, South Africa</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-social">
+  <h3>Follow Us</h3>
+  <a href="https://facebook.com/mnandibros" target="_blank" class="social-icon">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />
+  </a>
+  <a href="https://instagram.com/mnandibros" target="_blank" class="social-icon">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
+  </a>
+</div>
+
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Mnandi Bros Fast Food. All rights reserved.</p>
+  </div>
+</footer>
+
+<div id="cartModal" class="cart-modal hidden">
+  <h2>Your Cart</h2>
+  <ul id="cartItems"></ul>
+  <p>Total: R<span id="cartTotal">0.00</span></p>
+  <button id="checkoutBtn">Order Now</button>
+  <button id="closeCart">Close</button>
+</div>
+
+
+<!-- WhatsApp Order Button -->
+<a href="https://wa.me/27817723319?text=Hello%20Mnandi%20Bros!%20I%20would%20like%20to%20place%20an%20order." 
+   class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Order">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to top">&#8679;</button>
+
+
+<!-- Your HTML content here -->
+
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to top">&#8679;</button>
+
+<!-- Your existing footer, etc. -->
+
+<!-- Add this script before closing </body> -->
+<script>
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      backToTopBtn.style.display = "flex";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const menuTables = document.querySelectorAll('#menu table');
+  const searchInput = document.getElementById('menuSearch');
+
+  // Filter by category
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      // Add active to clicked button
+      button.classList.add('active');
+
+      const filter = button.getAttribute('data-filter');
+
+      menuTables.forEach(table => {
+        if(filter === 'all' || table.getAttribute('data-category') === filter) {
+          table.style.display = '';
+        } else {
+          table.style.display = 'none';
+        }
+      });
+
+      // Reset search input when filtering
+      searchInput.value = '';
+    });
+  });
+
+  // Search filter
+  searchInput.addEventListener('input', () => {
+    const searchText = searchInput.value.toLowerCase();
+
+    menuTables.forEach(table => {
+      // Show table if it contains any matching item
+      const rows = table.querySelectorAll('tbody tr, tr'); // in case you don't have tbody
+      let matchFound = false;
+
+      rows.forEach(row => {
+        const itemName = row.cells[0].textContent.toLowerCase();
+        if(itemName.includes(searchText)) {
+          row.style.display = '';
+          matchFound = true;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      table.style.display = matchFound ? '' : 'none';
+    });
+
+    // Remove active class from filter buttons when searching
+    if(searchText.length > 0) {
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+    } else {
+      // If search cleared, show all and set 'All' button active
+      menuTables.forEach(table => table.style.display = '');
+      document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+    }
+  });
+</script>
+
+<script>
+  const toggleButton = document.getElementById('darkModeToggle');
+  const body = document.body;
+
+  // Load saved mode from localStorage
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+  }
+
+  toggleButton.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    // Save preference in localStorage
+    if (body.classList.contains('dark-mode')) {
+      localStorage.setItem('darkMode', 'enabled');
+    } else {
+      localStorage.setItem('darkMode', 'disabled');
+    }
+  });
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 4000); // Change slide every 4 seconds
+  }
+</script>
+
+<script>
+  function saveFavorite(itemName) {
+    localStorage.setItem('favoriteMeal', itemName);
+    alert(itemName + ' has been saved as your favorite!');
+  }
+
+  function orderAgain() {
+    const fav = localStorage.getItem('favoriteMeal');
+    if (fav) {
+      // Update with your WhatsApp number
+      const message = `Hi! I'd like to order again: ${fav}`;
+      window.open(`https://wa.me/27XXXXXXXXX?text=${encodeURIComponent(message)}`, '_blank');
+    } else {
+      alert("You haven't saved a favorite meal yet.");
+    }
+  }
+</script>
+
+<script>
+  let currentStep = 0;
+  const steps = document.querySelectorAll('.step');
+
+  function advanceStep() {
+    if (currentStep < steps.length) {
+      steps[currentStep].classList.remove('active');
+      currentStep++;
+      if (currentStep < steps.length) {
+        steps[currentStep].classList.add('active');
+      }
+    }
+  }
+
+  // Initialize first step as active
+  steps[0].classList.add('active');
+</script>
+
+<section class="delivery-tracker">
+  <h2>Track Your Order</h2>
+  <div class="tracker-steps">
+    <div class="step active"><i class="fas fa-receipt"></i><br>Order Received</div>
+    <div class="step"><i class="fas fa-utensils"></i><br>Preparing</div>
+    <div class="step"><i class="fas fa-motorcycle"></i><br>On The Way</div>
+    <div class="step"><i class="fas fa-check-circle"></i><br>Delivered</div>
+  </div>
+  <button onclick="advanceStep()">Next Stage</button>
+</section>
+
+<button onclick="orderAgain()" class="order-again-btn">🛒 Order Again</button>
+
+[{
+	"resource": "/c:/Users/wayne/Videos/Mnandi Bros Website/index.html",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"severity": 8,
+	"message": "Unterminated template literal.",
+	"source": "javascript",
+	"startLineNumber": 738,
+	"startColumn": 1,
+	"endLineNumber": 738,
+	"endColumn": 1,
+	"origin": "extHost1"
+}]
+
+<script>
+  // Drag & Drop Build Your Own Meal
+
+  const ingredients = document.querySelectorAll('.ingredient[draggable="true"]');
+  const plateDropzone = document.getElementById('plate-dropzone');
+  const ingredientsList = document.getElementById('ingredientsList');
+  const clearPlateBtn = document.getElementById('clearPlateBtn');
+
+  let selectedIngredients = [];
+
+  ingredients.forEach(ingredient => {
+    ingredient.addEventListener('dragstart', dragStart);
+  });
+
+  function dragStart(e) {
+    e.dataTransfer.setData('text/plain', e.target.getAttribute('data-name'));
+    e.dataTransfer.setDragImage(e.target, 50, 50);
+  }
+
+  plateDropzone.addEventListener('dragover', e => {
+    e.preventDefault();
+    plateDropzone.style.backgroundColor = '#ffe6d6';
+  });
+
+  plateDropzone.addEventListener('dragleave', e => {
+    e.preventDefault();
+    plateDropzone.style.backgroundColor = '#fff';
+  });
+
+  plateDropzone.addEventListener('drop', e => {
+    e.preventDefault();
+    plateDropzone.style.backgroundColor = '#fff';
+
+    const ingredientName = e.dataTransfer.getData('text/plain');
+
+    if (!selectedIngredients.includes(ingredientName)) {
+      selectedIngredients.push(ingredientName);
+      updatePlate();
+    }
+  });
+
+  function updatePlate() {
+    // Clear existing
+    plateDropzone.innerHTML = '';
+
+    selectedIngredients.forEach(name => {
+      // Find ingredient element from original list to clone image
+      const original = [...ingredients].find(i => i.getAttribute('data-name') === name);
+      if (original) {
+        const clone = original.cloneNode(true);
+        clone.setAttribute('draggable', false);
+        plateDropzone.appendChild(clone);
+      }
+    });
+
+    updateIngredientList();
+  }
+
+  function updateIngredientList() {
+    ingredientsList.innerHTML = '';
+    selectedIngredients.forEach(name => {
+      const li = document.createElement('li');
+      li.textContent = name;
+      ingredientsList.appendChild(li);
+    });
+  }
+
+  clearPlateBtn.addEventListener('click', () => {
+    selectedIngredients = [];
+    updatePlate();
+  });
+
+const orderBtn = document.getElementById('orderBtn');
+const orderConfirmation = document.getElementById('orderConfirmation');
+
+// Show order button when ingredients are added
+function updatePlate() {
+  plateDropzone.innerHTML = '';
+
+  selectedIngredients.forEach(name => {
+    const original = [...ingredients].find(i => i.getAttribute('data-name') === name);
+    if (original) {
+      const clone = original.cloneNode(true);
+      clone.setAttribute('draggable', false);
+      plateDropzone.appendChild(clone);
+    }
+  });
+
+  updateIngredientList();
+
+  // Show button only if at least one item is selected
+  orderBtn.style.display = selectedIngredients.length ? 'inline-block' : 'none';
+  orderConfirmation.style.display = 'none';
+}
+
+// Handle order
+orderBtn.addEventListener('click', () => {
+  if (selectedIngredients.length === 0) return;
+
+  const message = `You have ordered a meal with:\n\n- ${selectedIngredients.join('\n- ')}`;
+  orderConfirmation.textContent = message;
+  orderConfirmation.style.display = 'block';
+
+  // Optionally: clear plate after order
+  // selectedIngredients = [];
+  // updatePlate();
+});
+
+
+function updatePlate() {
+  plateDropzone.innerHTML = '';
+
+  selectedIngredients.forEach(name => {
+    const original = [...ingredients].find(i => i.getAttribute('data-name') === name);
+    if (original) {
+      const clone = original.cloneNode(true);
+      clone.setAttribute('draggable', false);
+      plateDropzone.appendChild(clone);
+    }
+  });
+
+  updateIngredientList();
+
+  // Toggle order button
+  orderBtn.style.display = selectedIngredients.length ? 'inline-block' : 'none';
+  orderConfirmation.style.display = 'none';
+}
+
+orderBtn.addEventListener('click', () => {
+  if (selectedIngredients.length === 0) return;
+
+  const message = `You have ordered a meal with:\n\n- ${selectedIngredients.join('\n- ')}`;
+  orderConfirmation.textContent = message;
+  orderConfirmation.style.display = 'inline-block';
+});
+
+
+
+</script>
+
+
+</body>
+</html>
+</body>
+</html>
+
+<li><a href="#story">Our Story</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+
+<a href="#" class="social-icon">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />
+</a>
+<a href="#" class="social-icon">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
+</a>
+
